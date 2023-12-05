@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./home-bg.webp");
+  background-repeat: no-repeat;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#home-title {
+text-align: center;
+color: black;
+margin-bottom: 15px;
+font-weight: bolder;
+}
+
+#home-bg {
+  background-color:  rgb(93,137,186);
+  opacity: .7;
+}
+
+#app {
+  background-image: url("./home-bg.webp");
+}
+
+#sign-out {
+  margin-left: 1800px;
+  margin-bottom: 15px;
+}
+
+#main-logo {
+border-radius: 30%;
+color: #666;
+transition: .5s;
+-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+filter: grayscale(100%);
+}
+
+#main-logo::before {
+border-radius: 30%;
+ background: #ffee10;
+ transition: .5s;
+ transform: scale(.9);
+ z-index: -1;
+}
+
+#main-logo:hover::before {
+  transform: scale(5.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+#main-logo:hover {
+  color: #ffee10;
+  box-shadow: 0 0 50px #ffee10;
+  text-shadow: 0 0 50px #ffee10;
+  transition: 1s;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+filter: grayscale(0%);
 }
