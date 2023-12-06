@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./home-bg.webp");
+
   background-repeat: no-repeat;
 }
 
@@ -63,4 +63,51 @@ border-radius: 30%;
   transition: 1s;
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
 filter: grayscale(0%);
+}
+
+#c-notes {
+  background-color: lightblue;
+}
+
+#b-notes {
+  background-color: lightblue;
+}
+
+#note-name {
+  background-color: white;
+}
+
+#note-desc {
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+    body {
+background-image: url("./home-bg.webp");
+    }
+
+    #app {
+      background-image: url("./home-bg.webp");
+    }
+
+    #main-logo {
+    margin-left:345px;
+    }
+}
+
+
+@media screen and (max-width: 450px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+    body {
+background-image: url("./home-bg.webp");
+    }
+
+    #app {
+      background-image: url("./home-bg.webp");
+      width: 100%;
+    }
+
+    #main-logo {
+    margin-left:345px;
+    }
 }
