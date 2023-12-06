@@ -6,8 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-repeat: no-repeat;
+ background-image: url("./home-bg.webp");
 }
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -16,44 +19,43 @@ code {
 
 #home-title {
 text-align: center;
-color: black;
+color: white;
 margin-bottom: 15px;
 font-weight: bolder;
+background-color:  black;
 }
 
 #home-bg {
   background-color:  rgb(93,137,186);
-  opacity: .7;
+  opacity: .5;
 }
 
 #app {
-  background-image: url("./home-bg.webp");
-}
 
-#sign-out {
-  margin-left: 1800px;
-  margin-bottom: 15px;
 }
 
 #main-logo {
-border-radius: 30%;
+
 color: #666;
 transition: .5s;
 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 filter: grayscale(100%);
+width: 100%;
 }
 
 #main-logo::before {
-border-radius: 30%;
+
  background: #ffee10;
  transition: .5s;
  transform: scale(.9);
  z-index: -1;
+width: 100%;
 }
 
 #main-logo:hover::before {
   transform: scale(5.1);
   box-shadow: 0 0 15px #ffee10;
+  width: 100%;
 }
 
 #main-logo:hover {
@@ -65,49 +67,108 @@ border-radius: 30%;
 filter: grayscale(0%);
 }
 
-#c-notes {
-  background-color: lightblue;
+#c-notes-body {
+  background-color: black;
+  opacity: .7;
+
 }
 
 #b-notes {
-  background-color: lightblue;
+  text-align: center;
+  background-color: black;
+  opacity: .7;
+
 }
 
-#note-name {
-  background-color: white;
-}
 
-#note-desc {
-  background-color: white;
-  margin-bottom: 15px;
-}
 
 @media screen and (min-width: 1200px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
-    body {
-background-image: url("./home-bg.webp");
-    }
+
 
     #app {
-      background-image: url("./home-bg.webp");
+      /* background-image: url("./home-bg.webp"); */
     }
 
     #main-logo {
     margin-left:345px;
     }
+
+    #sign-out {
+      margin-left: 1800px;
+      margin-bottom: 15px;
+    }
+
 }
 
 
 @media screen and (max-width: 450px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
-    body {
+    /* body {
 background-image: url("./home-bg.webp");
-    }
+    } */
 
     #app {
-      background-image: url("./home-bg.webp");
+      /* background-image: url("./home-bg.webp"); */
       width: 100%;
     }
 
     #main-logo {
-    margin-left:345px;
+
     }
+
+    #poll-name {
+      background-color: white;
+      width:50%;
+    }
+
+    #poll-desc {
+      background-color: white;
+      margin: 0px 50px;
+      height:100px;
+      width:75%;
+
+    }
+
+    #factory-text {
+      color: white;
+    }
+
+    #note-btn {
+      margin: 75px 15px 15px 0px;
+    }
+
+    #b-notes-header{
+      color: white;
+      font-weight: bolder;
+
+    }
+
+    #c-notes-header {
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+
+    #sign-out {
+      margin-left:275px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      background-color: white;
+    }
+
+    .intro,
+.intro a{
+  color:#fff;
+  font-family:
+}
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+
 }

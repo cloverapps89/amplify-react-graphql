@@ -7,10 +7,11 @@ import {
   Heading,
   Image,
   View,
-  Card,
+  // Card,
   Flex,
   Text,
-  TextField
+  TextField,
+  TextAreaField
 } from "@aws-amplify/ui-react";
 import { listNotes } from "./graphql/queries";
 import {
@@ -61,46 +62,56 @@ const App = ({ signOut }) => {
 
   return (
 
-    <View className="App">
-      <Card id="app">
+    <View className="App" >
+
       <Button onClick={signOut} id="sign-out">Sign Out</Button>
       <div id="home-bg">
 <Heading level={1} id="home-title" > Welcome <br />  to  <br /> The Swole Pole! </Heading>
       </div>
 
-      <Image src={logo} className="App-logo" alt="logo" id="main-logo" />
+      <Image src={logo} className="App-logo snow" alt="logo" id="main-logo" />
 
-      </Card>
+
       <div id="b-notes">
-      <Heading level={1}>The Poles Board</Heading>
+      <Heading level={1} id="b-notes-header">The Polls Factory</Heading>
+
+      <Text id="factory-text"> Welcome to the factory, this is how we get all our Christmas ideas every year, from you!</Text>
+      <br/>
+      <Text id="factory-text"> Now we can't do what everyone wants each year so we've setup a way to vote on it.</Text>
+
 <View as="form" margin="3rem 0" onSubmit={createNote}>
-  <Flex direction="row" justifyContent="center">
+
     <TextField
       name="name"
-      placeholder="Note Name"
-      label="Note Name"
+      placeholder="Poll Name"
+      label="Poll Name"
       labelHidden
       variation="quiet"
       required
-      id="note-name"
+      id="poll-name"
     />
-    <TextField
+<br />
+    <TextAreaField
       name="description"
-      placeholder="Note Description"
-      label="Note Description"
+      placeholder="Poll Description: You only get 100 words, make em count :D"
+      label="Poll Description"
       labelHidden
       variation="quiet"
       required
-      id="note-desc"
+      id="poll-desc"
+      rows={3}
+      maxLength={100}
     />
-    <Button type="submit" variation="primary">
-      Create Note
+
+    <Button type="submit" variation="primary" id="note-btn">
+      Submit Poll
     </Button>
-  </Flex>
+
 </View>
 </div>
-<div id="c-notes">
-<Heading level={2}>Current Notes</Heading>
+
+<div id="c-notes-body">
+<Heading level={2} id="c-notes-header">Current Notes</Heading>
 <View margin="3rem 0">
   {notes.map((note) => (
     <Flex
@@ -109,10 +120,10 @@ const App = ({ signOut }) => {
       justifyContent="center"
       alignItems="center"
     >
-      <Text as="strong" fontWeight={700}>
+      <Text as="strong" fontWeight={700} id="factory-text">
         {note.name}
       </Text>
-      <Text as="span">{note.description}</Text>
+      <Text as="span" id="factory-text">{note.description}</Text>
       <Button variation="link" onClick={() => deleteNote(note)}>
         Delete note
       </Button>
