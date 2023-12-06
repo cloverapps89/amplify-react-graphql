@@ -1,6 +1,6 @@
 {
   "auth": {
-    "amplifyreactgraphql63c1e601": {
+    "amplifyreactgraphql1d271954": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -16,9 +16,7 @@
           "EMAIL"
         ],
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
+        "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
         ]

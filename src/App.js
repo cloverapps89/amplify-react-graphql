@@ -11,6 +11,7 @@ import {
 
 function App({ signOut }) {
   return (
+
     <View className="App">
       <Card id="app">
       <Button onClick={signOut} id="sign-out">Sign Out</Button>
@@ -25,4 +26,4 @@ function App({ signOut }) {
   );
 }
 
-export default withAuthenticator(App);
+export default withAuthenticator(App, {signUpAttributes: ['email']});
