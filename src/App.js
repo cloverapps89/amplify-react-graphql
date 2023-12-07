@@ -20,6 +20,19 @@ import {
 } from "./graphql/mutations";
 
 import { generateClient } from "aws-amplify/api";
+import { getCurrentUser } from 'aws-amplify/auth';
+
+async function currentAuthenticatedUser() {
+  try {
+    const { username, userId, signInDetails } = await getCurrentUser();
+    console.log(`The username: ${username}`);
+    console.log(`The userId: ${userId}`);
+    console.log(`The signInDetails: ${signInDetails}`);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 const client = generateClient();
 
 const App = ({ signOut }) => {
@@ -121,12 +134,14 @@ const App = ({ signOut }) => {
       alignItems="center"
     >
       <Text as="strong" fontWeight={700} id="factory-text">
-        {note.name}
+
       </Text>
       <Text as="span" id="factory-text">{note.description}</Text>
+
       <Button variation="link" onClick={() => deleteNote(note)}>
         Delete note
       </Button>
+
     </Flex>
   ))}
 </View>
